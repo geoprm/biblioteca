@@ -37,6 +37,12 @@
   .botao:focus-visible { outline: 3px solid #3A6EA8; outline-offset: 3px; }
   .contato { text-align: center; display: grid; gap: 10px; }
   .contato a { display: block; padding: 14px; border-radius: 12px; border: 1.5px solid var(--linha); background: #fff; font-weight: 700; text-decoration: none; }
+  .colecao-titulo { margin: 14px 0 0; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); text-align: center; }
+  .dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .dupla .produto h2 { font-size: 18px; }
+  .dupla .corpo { padding: 14px 14px 16px; }
+  .dupla .linha { flex-direction: column; align-items: stretch; }
+  .dupla .botao { justify-content: center; font-size: 15px; padding: 11px 14px; }
   footer { text-align: center; font-size: 13px; color: var(--suave); padding: 0 16px 30px; }
 </style>
 </head>
@@ -65,6 +71,27 @@
       <div class="linha"><span class="preco">R$ 37</span><a class="botao" href="https://geoprm.github.io/missao-fala-em-casa/?src=bio">Conhecer a missão →</a></div>
     </div>
   </article>
+  <h2 class="colecao-titulo">Coleção Rotinas da Infância</h2>
+  <div class="dupla">
+    <article class="produto">
+      <img src="img/fora-chupeta.jpg" alt="E-book Fora Chupeta" width="600" height="600">
+      <div class="corpo">
+        <span class="tag">1 a 5 anos</span>
+        <h2>Fora Chupeta</h2>
+        <p>Um guia gradual para deixar a chupeta (e o dedo) com acolhimento e atenção à saúde da boca.</p>
+        <div class="linha"><span class="preco">R$ 27</span><a class="botao" href="https://pay.hotmart.com/G108232252W?src=bio">Comprar →</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <img src="img/menos-tela.jpg" alt="E-book Menos Tela, Mais Mundo" width="600" height="600">
+      <div class="corpo">
+        <span class="tag">0 a 10 anos</span>
+        <h2>Menos Tela, Mais Mundo</h2>
+        <p>Reduzir as telas sem guerra e devolver à criança a conversa, a atenção e a brincadeira.</p>
+        <div class="linha"><span class="preco">R$ 27</span><a class="botao" href="https://pay.hotmart.com/J108232306M?src=bio">Comprar →</a></div>
+      </div>
+    </article>
+  </div>
   <div class="contato">
     <a href="https://wa.me/5574988617935">Falar comigo no WhatsApp</a>
     <a href="https://instagram.com/dr.geovanimiranda">@dr.geovanimiranda no Instagram</a>
