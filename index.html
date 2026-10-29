@@ -81,7 +81,7 @@
       <div class="linha"><span class="preco">R$ 37</span><a class="botao" href="https://geoprm.github.io/missao-fala-em-casa/?src=bio">Conhecer a missão →</a></div>
     </div>
   </article>
-  <h2 class="colecao-titulo">Coleção Fala em Casa</h2>
+  <h2 class="colecao-titulo" id="fala-em-casa">Coleção Fala em Casa</h2>
   <article class="produto">
     <img src="img/alem-do-diagnostico.jpg" alt="E-book Além do Diagnóstico" width="1000" height="1000">
     <div class="corpo">
@@ -111,7 +111,7 @@
       </div>
     </article>
   </div>
-  <h2 class="colecao-titulo">Coleção Rotinas da Infância</h2>
+  <h2 class="colecao-titulo" id="rotinas">Coleção Rotinas da Infância</h2>
   <article class="produto">
     <img src="img/mesa-sem-batalha.jpg" alt="E-book A Mesa sem Batalha" width="1000" height="1000">
     <div class="corpo">
@@ -121,7 +121,7 @@
       <div class="linha"><span class="preco">R$ 37</span><a class="botao" href="https://pay.hotmart.com/P108238606B?src=bio">Comprar →</a></div>
     </div>
   </article>
-  <article class="produto">
+  <article class="produto" id="kit">
     <img src="img/kit-rotinas.jpg" alt="Kit Rotinas da Infância: e-books Fora Chupeta, Menos Tela Mais Mundo e Desfralde sem Sufoco" width="1000" height="1000">
     <div class="corpo">
       <span class="tag">3 e-books · 1 a 5 anos</span>
@@ -164,5 +164,13 @@
   </div>
 </main>
 <footer>Materiais educativos: não substituem avaliação fonoaudiológica. Compras processadas pela Hotmart.</footer>
+<script>
+  // Repassa a origem da visita (?src=story, ?src=ads-kit…) aos links de compra, para a Hotmart mostrar de onde veio cada venda.
+  (function () {
+    var s = new URLSearchParams(location.search).get('src');
+    if (!s || !/^[\w-]{1,40}$/.test(s)) return;
+    document.querySelectorAll('a[href*="src=bio"]').forEach(function (a) { a.href = a.href.replace('src=bio', 'src=' + s); });
+  })();
+</script>
 </body>
 </html>
