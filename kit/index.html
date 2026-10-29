@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Rotinas da Infância — Dr. Geovani Miranda</title>
+<meta name="description" content="Três e-books para famílias de crianças de 1 a 5 anos: Fora Chupeta, Menos Tela Mais Mundo e Desfralde sem Sufoco. Um método passo a passo para cada passagem, sem culpa e sem pressão.">
+<meta property="og:title" content="Kit Rotinas da Infância · 3 e-books">
+<meta property="og:description" content="Chupeta, tela e fralda: três passagens que não precisam virar guerra em casa.">
+<meta property="og:image" content="https://geoprm.github.io/biblioteca/img/kit-rotinas.jpg">
+<meta property="og:type" content="product">
+<meta name="theme-color" content="#2E1A28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@1,8..60,500&display=swap" rel="stylesheet">
+<style>
+  /* Mesmo sistema das páginas do LeC e da Missão; cada livro do kit mantém a cor da capa. */
+  :root {
+    --papel: #FFFAF8; --papel-2: #F6EAE4; --tinta: #3B2233; --tinta-suave: #6B5562; --noite: #2E1A28;
+    --ameixa: #7A3B5E; --salvia: #5C7F63; --ceu: #3A6EA8; --folha: #3F7D54; --framboesa: #C4452F; --sol: #E0A02A;
+    --branco: #FFFFFF; --linha: #E6D5CD;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font-family: "Manrope", "Segoe UI", system-ui, sans-serif; font-size: 17px; line-height: 1.55; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .faixa { padding: 72px 20px; }
+  .miolo { max-width: 1080px; margin: 0 auto; }
+  .estreito { max-width: 720px; margin: 0 auto; }
+  h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -.02em; text-wrap: balance; }
+  h1 { font-size: clamp(34px, 5.2vw, 56px); font-weight: 800; }
+  h2 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 800; }
+  h3 { font-size: 20px; font-weight: 800; }
+  p { margin: 0; }
+  .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ameixa); }
+  .serifa { font-family: "Source Serif 4", Georgia, serif; font-style: italic; font-weight: 500; }
+
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--sol); color: var(--noite); text-decoration: none; font-weight: 800; font-size: 19px; padding: 18px 30px; border-radius: 12px; border: 3px solid var(--noite); box-shadow: 0 5px 0 var(--noite); transition: transform .12s ease, box-shadow .12s ease; }
+  .botao:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--noite); }
+  .botao:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--noite); }
+  .botao:focus-visible { outline: 3px solid var(--ceu); outline-offset: 4px; }
+  .seta { font-size: 22px; line-height: 1; }
+
+  .topo { padding: 16px 20px; background: var(--noite); color: var(--papel); }
+  .topo .miolo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .marca { font-weight: 800; font-size: 15px; }
+  .marca span { color: #D9BFCD; font-weight: 600; }
+
+  .heroi { padding: 56px 20px 64px; background: var(--noite); color: var(--papel); }
+  .heroi .miolo { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .heroi .eyebrow { color: var(--sol); }
+  .heroi h1 em { font-style: normal; color: var(--sol); }
+  .heroi .lead { font-size: 20px; color: #E9D9E1; margin-top: 20px; max-width: 38ch; }
+  .selos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .selo { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border: 1.5px solid #8E6A80; color: #F1E3EA; border-radius: 999px; padding: 5px 13px; }
+  .preco { margin-top: 30px; display: grid; gap: 14px; justify-items: start; }
+  .preco-linha { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .preco-valor { font-size: 44px; font-weight: 800; letter-spacing: -.02em; }
+  .preco-nota { font-size: 15px; color: #D9BFCD; }
+  .garantias { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: #D9BFCD; }
+  .garantias span::before { content: "✓"; color: #8FC59D; font-weight: 800; margin-right: 6px; }
+  .heroi-img img { border-radius: 18px; }
+
+  .assinatura { background: var(--papel-2); padding: 44px 20px; text-align: center; }
+  .assinatura p { font-size: clamp(22px, 3vw, 32px); line-height: 1.3; color: var(--ameixa); max-width: 820px; margin: 0 auto; }
+  .blocos-fila { display: flex; justify-content: center; gap: 8px; margin-bottom: 18px; }
+  .blocos-fila i { width: 26px; height: 26px; border: 2px solid var(--noite); border-radius: 3px; box-shadow: inset 0 5px 0 rgba(255,255,255,.3); }
+
+  /* três cenas: a cor de cada uma é a da capa do livro que responde a ela */
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .cena { background: var(--branco); border: 1.5px solid var(--linha); border-top: 6px solid var(--cor); border-radius: 12px; padding: 22px; }
+  .cena .tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; background: var(--cor); color: #fff; border-radius: 4px; padding: 2px 8px; margin-bottom: 10px; }
+  .cena p { margin-top: 10px; color: var(--tinta-suave); font-size: 16px; }
+  .texto-grande { font-size: 19px; color: var(--tinta-suave); margin-top: 18px; }
+
+  .duas-col { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+  .pagina-img { border-radius: 10px; border: 1.5px solid var(--linha); box-shadow: 0 24px 50px rgba(46,26,40,.18); }
+  .inclinada { transform: rotate(-1.5deg); }
+  .livro .eyebrow { color: var(--cor); }
+  .fases { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; counter-reset: n; }
+  .fases li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; font-size: 17px; counter-increment: n; }
+  .fases li::before { content: counter(n); display: grid; place-items: center; width: 24px; height: 24px; margin-top: 2px; border-radius: 4px; background: var(--cor); border: 2px solid var(--noite); color: #fff; font-weight: 800; font-size: 13px; box-shadow: inset 0 5px 0 rgba(255,255,255,.25); }
+  .fases li b { display: block; }
+  .fases li span { color: var(--tinta-suave); font-size: 16px; }
+  .tambem { margin-top: 22px; font-size: 16px; color: var(--tinta-suave); border-left: 4px solid var(--cor); padding: 4px 0 4px 14px; }
+  .tambem b { color: var(--tinta); }
+
+  .escura { background: var(--noite); color: var(--papel); }
+  .escura .texto-grande, .escura .fases li span, .escura .tambem { color: #E2CFD9; }
+  .escura .tambem b { color: var(--papel); }
+  .escura .livro .eyebrow, .escura.livro .eyebrow { color: #8DB6E6; }
+
+  .recebe { background: var(--branco); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+  .conta { margin-top: 28px; border: 1.5px solid var(--linha); border-radius: 14px; overflow: hidden; }
+  .conta table { width: 100%; border-collapse: collapse; font-size: 17px; font-variant-numeric: tabular-nums; }
+  .conta td { padding: 14px 18px; border-bottom: 1px solid var(--linha); }
+  .conta td:last-child { text-align: right; white-space: nowrap; font-weight: 700; }
+  .conta td small { display: block; color: var(--tinta-suave); font-size: 14px; font-weight: 500; }
+  .conta tr.total td { background: var(--papel-2); font-weight: 800; border-bottom: 0; }
+  .conta tr.kit td { background: var(--noite); color: var(--papel); font-weight: 800; font-size: 19px; border-bottom: 0; }
+  .conta tr.kit td:last-child { color: var(--sol); }
+
+  .autor { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .bloco { background: var(--branco); border: 1.5px solid var(--linha); border-radius: 14px; padding: 26px; }
+  .bloco p { margin-top: 12px; color: var(--tinta-suave); font-size: 16px; }
+  .bloco ul { margin: 12px 0 0; padding-left: 20px; color: var(--tinta-suave); font-size: 16px; }
+  .bloco li { margin-bottom: 6px; }
+  .bloco.alerta { border: 2px solid var(--framboesa); }
+
+  details { background: var(--branco); border: 1.5px solid var(--linha); border-radius: 12px; padding: 0 20px; margin-top: 12px; }
+  summary { cursor: pointer; font-weight: 800; padding: 18px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--ameixa); }
+  details[open] summary::after { content: "–"; }
+  details p { padding: 0 0 18px; color: var(--tinta-suave); font-size: 16px; }
+  summary:focus-visible { outline: 3px solid var(--ceu); outline-offset: 2px; border-radius: 6px; }
+
+  .oferta { text-align: center; background: var(--papel-2); }
+  .oferta .caixa { background: var(--branco); border: 3px solid var(--noite); border-radius: 22px; padding: 40px 24px; box-shadow: 10px 10px 0 var(--sol); max-width: 640px; margin: 0 auto; display: grid; gap: 16px; justify-items: center; }
+  .oferta .caixa img { width: 300px; border-radius: 12px; }
+  .oferta .preco-linha { justify-content: center; }
+  .oferta .preco-nota, .oferta .garantias { color: var(--tinta-suave); }
+  .oferta .garantias span::before { color: var(--folha); }
+
+  footer { padding: 40px 20px 110px; font-size: 14px; color: var(--tinta-suave); border-top: 1px solid var(--linha); }
+  footer .miolo { display: grid; gap: 10px; }
+  footer a { font-weight: 700; }
+
+  .barra { position: fixed; left: 0; right: 0; bottom: 0; background: var(--noite); color: var(--papel); border-top: 2px solid var(--sol); padding: 10px 16px; display: none; align-items: center; justify-content: space-between; gap: 12px; z-index: 10; }
+  .barra .botao { font-size: 16px; padding: 12px 18px; box-shadow: 0 3px 0 #000; }
+  .barra b { font-size: 20px; }
+
+  .heroi .miolo > *, .duas-col > *, .autor > *, .tres > * { min-width: 0; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .botao { transition: none; } }
+  @media (max-width: 860px) {
+    .faixa { padding: 56px 16px; }
+    .heroi { padding: 32px 16px 48px; }
+    .heroi .miolo, .duas-col, .autor { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .tres { grid-template-columns: minmax(0, 1fr); }
+    .topo .botao { display: none; }
+    .botao { font-size: 17px; padding: 16px 22px; }
+    .barra { display: flex; }
+    .inclinada { transform: none; }
+    .ordem-mobile { order: -1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <p class="marca">Kit Rotinas da Infância <span>· Dr. Geovani Miranda</span></p>
+    <a class="botao" href="https://pay.hotmart.com/P108241275X" style="font-size:15px;padding:10px 18px;box-shadow:0 3px 0 #000">Quero o kit</a>
+  </div>
+</header>
+
+<main>
+<section class="heroi">
+  <div class="miolo">
+    <div>
+      <p class="eyebrow">Para famílias de crianças de 1 a 5 anos</p>
+      <h1>Chupeta, tela e fralda: três passagens que <em>não precisam virar guerra</em>.</h1>
+      <p class="lead">Três e-books com um método passo a passo para cada uma — sem culpa, sem pressão, com ferramentas para preencher e os sinais de quando procurar ajuda profissional.</p>
+      <div class="selos"><span class="selo">3 e-books · edição 2.0</span><span class="selo">31 páginas</span><span class="selo">Celular ou impresso</span></div>
+      <div class="preco">
+        <div class="preco-linha"><span class="preco-valor">R$ 47</span><span class="preco-nota">os três juntos · separados, R$ 81</span></div>
+        <a class="botao" href="https://pay.hotmart.com/P108241275X">Quero o kit <span class="seta">→</span></a>
+        <div class="garantias"><span>Acesso imediato</span><span>PIX, boleto ou cartão</span><span>7 dias de garantia</span></div>
+      </div>
+    </div>
+    <div class="heroi-img"><img src="../img/kit-rotinas.jpg" alt="Capas dos e-books Fora Chupeta, Menos Tela Mais Mundo e Desfralde sem Sufoco" width="1000" height="1000"></div>
+  </div>
+</section>
+
+<section class="assinatura">
+  <div class="blocos-fila" aria-hidden="true"><i style="background:var(--framboesa)"></i><i style="background:var(--ceu)"></i><i style="background:var(--folha)"></i></div>
+  <p class="serifa">Nenhuma das três é sobre arrancar algo da criança. É sobre trocar a cobrança por um processo que ela consegue acompanhar.</p>
+</section>
+
+<section class="faixa">
+  <div class="estreito">
+    <p class="eyebrow">Talvez você já tenha vivido isso</p>
+    <h2>Três cenas de quase toda casa com criança pequena</h2>
+    <p class="texto-grande">E, em cada uma, alguém dando um conselho diferente: “tira logo”, “deixa que sai sozinho”, “na idade dele eu já…”. Os livros começam tirando a culpa da mesa e trocando o palpite por um plano.</p>
+  </div>
+  <div class="miolo tres">
+    <div class="cena" style="--cor:var(--framboesa)"><span class="tag">Chupeta</span><h3>A chupeta caiu no chão da farmácia e virou crise de choro.</h3><p>A chupeta não é vilã, e você não errou por oferecer: ela acalma e organiza. O que pesa é o tempo que ela fica, enquanto boca, dentes, língua e respiração ainda estão se formando.</p></div>
+    <div class="cena" style="--cor:var(--ceu)"><span class="tag">Tela</span><h3>Desligou o celular e veio uma birra enorme.</h3><p>A tela não é o inimigo. O problema é o tempo que ela tira da conversa, da brincadeira e da troca — e isso dá para devolver sem proibir tudo de uma vez.</p></div>
+    <div class="cena" style="--cor:var(--folha)"><span class="tag">Fralda</span><h3>A creche pede, a avó opina, e a fralda vira assunto de todo almoço.</h3><p>A idade não é o critério principal: a prontidão é. A pressa costuma trazer recaída, criança segurando xixi e cocô e, às vezes, medo do banheiro.</p></div>
+  </div>
+</section>
+
+<section class="faixa recebe livro" style="--cor:var(--framboesa)">
+  <div class="miolo duas-col">
+    <img class="pagina-img inclinada" src="img/fora-chupeta-metodo.jpg" alt="Página do método Fora Chupeta, com as quatro fases" width="880" height="1245" loading="lazy">
+    <div>
+      <p class="eyebrow">Livro 1 · 1 a 5 anos</p>
+      <h2>Fora Chupeta</h2>
+      <p class="texto-grande">Um método gradual para deixar a chupeta — e o dedo — com acolhimento e atenção à saúde da boca.</p>
+      <ol class="fases">
+        <li><div><b>Preparar</b><span>o ambiente e os adultos</span></div></li>
+        <li><div><b>Reduzir</b><span>dar à chupeta um “endereço”</span></div></li>
+        <li><div><b>Substituir</b><span>outras âncoras de conforto e de boca</span></div></li>
+        <li><div><b>Despedir</b><span>um ritual, com a criança como protagonista</span></div></li>
+      </ol>
+      <p class="tambem"><b>E mais:</b> a semana da despedida dia a dia, o que fazer com o dedo, os 7 erros que fazem tudo dar errado e quando procurar fonoaudiólogo e odontopediatra.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faixa escura livro" style="--cor:var(--ceu)">
+  <div class="miolo duas-col">
+    <div>
+      <p class="eyebrow">Livro 2 · 0 a 10 anos</p>
+      <h2>Menos Tela, Mais Mundo</h2>
+      <p class="texto-grande">Não é sobre proibir: é sobre reequilibrar. Reduzir as telas sem guerra e devolver à criança a conversa, a atenção e a brincadeira.</p>
+      <ol class="fases">
+        <li><div><b>Mapear</b><span>quando e por que a tela aparece</span></div></li>
+        <li><div><b>Reduzir</b><span>uma janela de cada vez</span></div></li>
+        <li><div><b>Substituir</b><span>interação, brincadeira e tédio criativo</span></div></li>
+        <li><div><b>Sustentar</b><span>regras claras e o exemplo do adulto</span></div></li>
+      </ol>
+      <p class="tambem"><b>E mais:</b> o desafio de 14 dias, o que a Sociedade Brasileira de Pediatria recomenda para cada idade, os sinais de que a tela está pesando e um capítulo honesto sobre telas, fala e autismo.</p>
+    </div>
+    <img class="pagina-img ordem-mobile" src="img/menos-tela-desafio.jpg" alt="Página do desafio de 14 dias do Menos Tela, Mais Mundo" width="880" height="1245" loading="lazy">
+  </div>
+</section>
+
+<section class="faixa livro" style="--cor:var(--folha)">
+  <div class="miolo duas-col">
+    <img class="pagina-img inclinada" src="img/desfralde-prontidao.jpg" alt="Página dos três tipos de prontidão para o desfralde, com checklist" width="880" height="1245" loading="lazy">
+    <div>
+      <p class="eyebrow">Livro 3 · quando a prontidão aparece</p>
+      <h2>Desfralde sem Sufoco</h2>
+      <p class="texto-grande">Reconhecer quando a criança está pronta e conduzir o desfralde com firmeza gentil — sem prazo fixo e sem castigo.</p>
+      <ol class="fases">
+        <li><div><b>Preparar</b><span>ambiente, rotina e palavras</span></div></li>
+        <li><div><b>Apresentar</b><span>o penico, sem pressão</span></div></li>
+        <li><div><b>Praticar</b><span>idas regulares, roupa fácil</span></div></li>
+        <li><div><b>Sustentar</b><span>consistência, sem punir</span></div></li>
+      </ol>
+      <p class="tambem"><b>E mais:</b> os 3 tipos de prontidão com checklist, o registro de acertos, a criança que segura o cocô, a noite sem pressa, adaptações para crianças autistas ou com outra condição do desenvolvimento e quando procurar o pediatra.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faixa recebe">
+  <div class="estreito">
+    <p class="eyebrow">O que você recebe</p>
+    <h2>Três PDFs para ler no celular ou imprimir</h2>
+    <p class="texto-grande">Cada livro funciona sozinho, com o próprio método, ferramentas para preencher e referências no fim. Você começa pela passagem que mais pesa hoje.</p>
+    <div class="conta">
+      <table>
+        <tr><td>Fora Chupeta<small>10 páginas · 1 a 5 anos</small></td><td>R$ 27</td></tr>
+        <tr><td>Menos Tela, Mais Mundo<small>10 páginas · 0 a 10 anos</small></td><td>R$ 27</td></tr>
+        <tr><td>Desfralde sem Sufoco<small>11 páginas · a partir dos sinais de prontidão</small></td><td>R$ 27</td></tr>
+        <tr class="total"><td>Comprando separado</td><td>R$ 81</td></tr>
+        <tr class="kit"><td>No kit, os três</td><td>R$ 47</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="miolo autor">
+    <div class="bloco">
+      <p class="eyebrow">Quem escreveu</p>
+      <h3 style="margin-top:10px">Dr. Geovani Miranda</h3>
+      <p>Fonoaudiólogo, bacharel em Fonoaudiologia · CRFa 4-12208 · com anos de experiência.</p>
+      <p>Chupeta, tela e fralda mexem com a boca, com a fala, com o sono e com a paciência da casa inteira. Os três livros juntam passos práticos para o dia a dia com referências — como as recomendações da Sociedade Brasileira de Pediatria sobre telas — e dizem com clareza quando é hora de procurar um profissional.</p>
+    </div>
+    <div class="bloco alerta">
+      <p class="eyebrow" style="color:var(--framboesa)">Com toda a transparência</p>
+      <h3 style="margin-top:10px">O que o kit é — e o que não é</h3>
+      <ul>
+        <li>É material educativo para organizar essas mudanças em casa.</li>
+        <li>Não diagnostica e não substitui pediatra, odontopediatra, fonoaudiólogo ou outro profissional.</li>
+        <li>Não promete resultado em data marcada: cada criança tem o seu ritmo.</li>
+        <li>Dor, prisão de ventre, perda de habilidades que a criança já tinha ou preocupação com a fala pedem avaliação — inclusive enquanto você usa os livros.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faixa" style="background:var(--papel-2)">
+  <div class="estreito">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2>Antes de comprar</h2>
+    <details><summary>Meu filho usa chupeta, tela e fralda. Faço tudo de uma vez?</summary><p>Não precisa. Cada livro funciona sozinho: escolha a passagem que mais pesa hoje na rotina de vocês e comece por ela.</p></details>
+    <details><summary>Para que idade serve?</summary><p>Fora Chupeta foi escrito para crianças de 1 a 5 anos e o Menos Tela vale de 0 a 10. No desfralde, a prontidão conta mais do que a idade — o livro ensina a reconhecê-la.</p></details>
+    <details><summary>Meu filho é autista ou tem outra condição do desenvolvimento. Serve?</summary><p>O Desfralde tem um capítulo de adaptações para essas crianças, e o Menos Tela tem um capítulo honesto sobre telas, fala e autismo. Nesses casos, combine os passos com a equipe que acompanha a criança.</p></details>
+    <details><summary>Posso comprar só um?</summary><p>Pode: cada livro sai por R$ 27 na <a href="../#rotinas">Biblioteca</a>. No kit, os três saem por R$ 47.</p></details>
+    <details><summary>Preciso imprimir?</summary><p>Não é obrigatório: dá para ler no celular. Os checklists e os registros ficam melhores impressos.</p></details>
+    <details><summary>Como recebo e se eu não gostar?</summary><p>Logo depois da confirmação do pagamento, a Hotmart envia o acesso por e-mail para baixar os três PDFs. Você tem 7 dias de garantia: se não for para você, pede o reembolso pela própria Hotmart.</p></details>
+  </div>
+</section>
+
+<section class="faixa oferta">
+  <div class="caixa">
+    <img src="../img/kit-rotinas.jpg" alt="" width="1000" height="1000" loading="lazy">
+    <h2>Kit Rotinas da Infância</h2>
+    <div class="preco-linha"><span class="preco-valor">R$ 47</span><span class="preco-nota">3 e-books · separados, R$ 81</span></div>
+    <a class="botao" href="https://pay.hotmart.com/P108241275X">Quero o kit <span class="seta">→</span></a>
+    <div class="garantias" style="justify-content:center"><span>Acesso imediato</span><span>PIX, boleto ou cartão</span><span>7 dias de garantia</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="miolo">
+    <p><b>Dr. Geovani Miranda · Fonoaudiólogo · CRFa 4-12208</b></p>
+    <p>Material educativo. Não substitui avaliação profissional. Licença de uso individual: não compartilhe nem revenda os arquivos.</p>
+    <p>Dúvidas sobre a compra: <a href="https://wa.me/5574988617935">WhatsApp (74) 98861-7935</a> · <a href="https://instagram.com/dr.geovanimiranda">@dr.geovanimiranda</a> · <a href="../">todos os guias</a></p>
+    <p>Pagamento, entrega e reembolso processados pela Hotmart.</p>
+  </div>
+</footer>
+
+<div class="barra" role="complementary" aria-label="Comprar">
+  <div><b>R$ 47</b><br><span style="font-size:13px;color:#D9BFCD">3 e-books</span></div>
+  <a class="botao" href="https://pay.hotmart.com/P108241275X">Quero o kit</a>
+</div>
+
+<script>
+  // A origem da visita (?src=ads-kit, ?src=story…) vai junto para o checkout; sem ela, fica "kit".
+  (function () {
+    var s = new URLSearchParams(location.search).get('src');
+    if (!s || !/^[\w-]{1,40}$/.test(s)) s = 'kit';
+    document.querySelectorAll('a[href^="https://pay.hotmart.com/"]').forEach(function (a) { a.href += (a.href.indexOf('?') < 0 ? '?' : '&') + 'src=' + s; });
+  })();
+</script>
+</body>
+</html>
