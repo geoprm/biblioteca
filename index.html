@@ -43,6 +43,16 @@
   .dupla .corpo { padding: 14px 14px 16px; }
   .dupla .linha { flex-direction: column; align-items: stretch; }
   .dupla .botao { justify-content: center; font-size: 15px; padding: 11px 14px; }
+  .produto p.economia { color: var(--tinta); font-weight: 700; }
+  .avulsos-titulo { margin: 0; font-size: 15px; font-weight: 800; color: var(--suave); }
+  .avulsos { display: grid; gap: 10px; margin-top: -8px; }
+  .avulso { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; background: #fff; border: 1.5px solid var(--linha); border-radius: 14px; padding: 10px 14px 12px 10px; }
+  .avulso img { border-radius: 10px; aspect-ratio: 1; object-fit: cover; }
+  .avulso h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+  .avulso p { margin: 3px 0 0; color: var(--suave); font-size: 14px; line-height: 1.4; }
+  .avulso .linha { margin-top: 8px; flex-wrap: nowrap; }
+  .avulso .preco { font-size: 18px; }
+  .botao.mini { font-size: 14px; padding: 8px 14px; border-width: 2px; box-shadow: 0 3px 0 var(--noite); white-space: nowrap; }
   footer { text-align: center; font-size: 13px; color: var(--suave); padding: 0 16px 30px; }
 </style>
 </head>
@@ -111,23 +121,40 @@
       <div class="linha"><span class="preco">R$ 37</span><a class="botao" href="https://pay.hotmart.com/P108238606B?src=bio">Comprar →</a></div>
     </div>
   </article>
-  <div class="dupla">
-    <article class="produto">
+  <article class="produto">
+    <img src="img/kit-rotinas.jpg" alt="Kit Rotinas da Infância: e-books Fora Chupeta, Menos Tela Mais Mundo e Desfralde sem Sufoco" width="1000" height="1000">
+    <div class="corpo">
+      <span class="tag">3 e-books · 1 a 5 anos</span>
+      <h2>Kit Rotinas da Infância</h2>
+      <p>Chupeta, telas e fralda: as três passagens que mais viram guerra nos primeiros anos, cada uma com um passo a passo sem culpa e sem pressão.</p>
+      <p class="economia">Separados, os três saem por R$ 81.</p>
+      <div class="linha"><span class="preco">R$ 47</span><a class="botao" href="https://pay.hotmart.com/P108241275X?src=bio">Comprar o kit →</a></div>
+    </div>
+  </article>
+  <h3 class="avulsos-titulo">Ou um de cada vez</h3>
+  <div class="avulsos">
+    <article class="avulso">
       <img src="img/fora-chupeta.jpg" alt="E-book Fora Chupeta" width="600" height="600">
-      <div class="corpo">
-        <span class="tag">1 a 5 anos</span>
-        <h2>Fora Chupeta</h2>
-        <p>Um guia gradual para deixar a chupeta (e o dedo) com acolhimento e atenção à saúde da boca.</p>
-        <div class="linha"><span class="preco">R$ 27</span><a class="botao" href="https://pay.hotmart.com/G108232252W?src=bio">Comprar →</a></div>
+      <div>
+        <h3>Fora Chupeta</h3>
+        <p>Deixar a chupeta (e o dedo) com acolhimento e atenção à saúde da boca.</p>
+        <div class="linha"><span class="preco">R$ 27</span><a class="botao mini" href="https://pay.hotmart.com/G108232252W?src=bio">Comprar →</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article class="avulso">
       <img src="img/menos-tela.jpg" alt="E-book Menos Tela, Mais Mundo" width="600" height="600">
-      <div class="corpo">
-        <span class="tag">0 a 10 anos</span>
-        <h2>Menos Tela, Mais Mundo</h2>
-        <p>Reduzir as telas sem guerra e devolver à criança a conversa, a atenção e a brincadeira.</p>
-        <div class="linha"><span class="preco">R$ 27</span><a class="botao" href="https://pay.hotmart.com/J108232306M?src=bio">Comprar →</a></div>
+      <div>
+        <h3>Menos Tela, Mais Mundo</h3>
+        <p>Reduzir as telas sem guerra e devolver à criança a conversa e a brincadeira.</p>
+        <div class="linha"><span class="preco">R$ 27</span><a class="botao mini" href="https://pay.hotmart.com/J108232306M?src=bio">Comprar →</a></div>
+      </div>
+    </article>
+    <article class="avulso">
+      <img src="img/desfralde.jpg" alt="E-book Desfralde sem Sufoco" width="600" height="600">
+      <div>
+        <h3>Desfralde sem Sufoco</h3>
+        <p>Reconhecer quando a criança está pronta e tirar a fralda sem pressa e sem castigo.</p>
+        <div class="linha"><span class="preco">R$ 27</span><a class="botao mini" href="https://pay.hotmart.com/Q108239892D?src=bio">Comprar →</a></div>
       </div>
     </article>
   </div>
